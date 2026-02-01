@@ -10,12 +10,13 @@ The model is loaded using 8-bit quantization to reduce memory usage and enable e
 
 ## Model Details
 
-- Model: `bigscience/bloom-7b1`
-- Architecture: Decoder-only Transformer (Causal Language Model)
-- Inference Optimization: 8-bit quantization (BitsAndBytes)
-- Framework: PyTorch + Hugging Face Transformers
+- **Model:** `bigscience/bloom-7b1`
+- **Architecture:** Decoder-only Transformer (Causal Language Model)
+- **Inference Optimization:** 8-bit quantization (BitsAndBytes)
+- **Framework:** PyTorch + Hugging Face Transformers
 
 ---
+
 ## Key Concepts Demonstrated
 
 - Loading large LLMs with 8-bit precision
@@ -27,10 +28,14 @@ The model is loaded using 8-bit quantization to reduce memory usage and enable e
 - Prompt-based creative story generation
 
 ---
-## prerequisites 
-- ensure you have torch and transformers libraries installed
-    ```bash
-    pip install torch transformers accelerate
+
+## Installation
+
+Install required libraries:
+
+```bash
+pip install torch transformers accelerate bitsandbytes
+
 
 ## How to use 
 - Open the notebook
@@ -45,7 +50,7 @@ The model is loaded using 8-bit quantization to reduce memory usage and enable e
 >The child stepped inside and ...
 
 ### Example output 
-*      found an old man sitting on a rock. He told him to be careful of his steps as he could see through the stones.
+     found an old man sitting on a rock. He told him to be careful of his steps as he could see through the stones.
       “My son,” said the old man, “I am your father. I have traveled far from my home in order to bring you here. You must not run or jump around so much. Stay still and keep your eyes open. There is danger everywhere!”
 
       “Why? What’s wrong?” asked the little boy with wide-open eyes.
@@ -68,5 +73,5 @@ The model is loaded using 8-bit quantization to reduce memory usage and enable e
 
        Another morning dawned and the girl woke up feeling very sleepy. She opened her eyes and noticed that there was someone standing beside her. Her eyes widened in surprise as she recognized the monster she’d seen earlier.
 
-       “Have you forgotten me already?” cried the monster. “You can’t hide forever. Come out and face me *
+       “Have you forgotten me already?” cried the monster. “You can’t hide forever. Come out and face me 
 
