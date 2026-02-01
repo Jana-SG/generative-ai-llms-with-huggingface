@@ -1,20 +1,47 @@
-# Task 3
+# Fine-Tuning DistilGPT2 for Poetry Generation
 
-## Overview of the task
+## Overview
 
-the main goal of this task was to compare model behaviour on a task before and after fine tuning(using HuggingFace trainer) on a small dataset
-I choose **distilgpt2 (distilgpt2)** and **Poetry-Foundation-Poems(suayptalha/Poetry-Foundation-Poems)** for this task 
+This notebook explores the behavioral differences of a pretrained language model before and after fine-tuning.
 
-## prerequisites 
-- ensure you have torch, transformers and datasets libraries installed
-    ```bash
-    pip install torch transformers accelerate datasets
+The base model `distilgpt2` is fine-tuned on a subset of the `suayptalha/Poetry-Foundation-Poems` dataset using the Hugging Face `Trainer` API. The goal is to observe how domain-specific fine-tuning influences text generation quality and stylistic coherence.
 
-## How to use the code if you want to compare yourself ?
-- download the code on your device 
-- open a code editor of your choice
-- change the prompt in both before and after fine tuning cells
-- run both and compare 
+---
+
+## Model & Dataset
+
+- **Base Model:** `distilgpt2`
+- **Architecture:** Decoder-only Transformer (Causal Language Model)
+- **Dataset:** `suayptalha/Poetry-Foundation-Poems`
+- **Framework:** PyTorch + Hugging Face Transformers
+- **Training Interface:** Hugging Face `Trainer`
+
+---
+
+## Training Pipeline
+
+- Tokenization with appropriate padding and truncation
+- Train/test split (80/20)
+- Causal Language Modeling objective
+- Evaluation at each epoch
+- Controlled generation for comparison
+
+---
+
+## Installation
+
+Install required libraries:
+
+```bash
+pip install torch transformers accelerate datasets
+```
+
+## How to use 
+- Open the notebook 
+- Run the preprocessing and training cells
+- Modify the prompt in the before fine-tuning generation cell
+- Run the after fine-tuning generation cell
+- Compare stylistic and structural differences
 
 ## Usage 
 ### Example input 
@@ -33,3 +60,12 @@ I choose **distilgpt2 (distilgpt2)** and **Poetry-Foundation-Poems(suayptalha/Po
 >In the dark, one hears a sound,
 >and one hears the light.
 >One hears the wind.
+
+## Key Concepts Demonstrated
+
+- Open the notebook
+- Run the preprocessing and training cells
+- Modify the prompt in the before fine-tuning generation cell
+- Run the after fine-tuning generation cell
+- Compare stylistic and structural differences
+
