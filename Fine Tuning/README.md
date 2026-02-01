@@ -63,9 +63,10 @@ pip install torch transformers accelerate datasets
 
 ## Key Concepts Demonstrated
 
-- Open the notebook
-- Run the preprocessing and training cells
-- Modify the prompt in the before fine-tuning generation cell
-- Run the after fine-tuning generation cell
-- Compare stylistic and structural differences
+- Transfer learning with pretrained Transformer architectures  
+- Fine-tuning causal language models (CLM objective)  
+- Model training using the Hugging Face `Trainer` API  
+- Dataset preprocessing and tokenization with the `datasets` library  
+- Comparative evaluation of generative model behavior  
+
 
