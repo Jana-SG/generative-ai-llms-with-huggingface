@@ -35,7 +35,7 @@ Install required libraries:
 
 ```bash
 pip install torch transformers accelerate bitsandbytes
-
+```
 
 ## How to use 
 - Open the notebook
