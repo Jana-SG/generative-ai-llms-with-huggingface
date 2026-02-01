@@ -50,15 +50,22 @@ pip install torch transformers accelerate datasets
 ### Example output 
 -Before fine tuning
 >I would like to get to know your favourite story about the rain. What was it like in that song?
+
 >I think you are going to like the story about the rain.
+
 >So, what would you like to see you go to the rain.
+
 >My idea is to go to a place
 
 -After fine tuning 
 >a few dozen people who walk through the streets
+
 >and see the rain.
+
 >In the dark, one hears a sound,
+
 >and one hears the light.
+
 >One hears the wind.
 
 ## Key Concepts Demonstrated
