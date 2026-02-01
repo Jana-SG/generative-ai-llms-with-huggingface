@@ -1,22 +1,42 @@
-# Task 1 
+# Text Generation with BLOOM-7B (Quantized Inference)
 
-## Overview of the task
+## Overview
 
-the main goal of this task was to use one of the transformer libraries pretrained models 
-to generate 3 stories based user prompts 
-I choose **BLOOM 7B (bigscience/bloom-7b1)** for this task 
+This notebook demonstrates autoregressive text generation using the pretrained model `bigscience/bloom-7b1` from Hugging Face.
 
+The model is loaded using 8-bit quantization to reduce memory usage and enable efficient inference on limited GPU resources. Custom decoding parameters are applied to control output diversity and repetition.
+
+---
+
+## Model Details
+
+- Model: `bigscience/bloom-7b1`
+- Architecture: Decoder-only Transformer (Causal Language Model)
+- Inference Optimization: 8-bit quantization (BitsAndBytes)
+- Framework: PyTorch + Hugging Face Transformers
+
+---
+## Key Concepts Demonstrated
+
+- Loading large LLMs with 8-bit precision
+- Controlled text generation using:
+  - Temperature scaling
+  - Top-p (nucleus sampling)
+  - Repetition penalty
+  - No-repeat n-gram constraints
+- Prompt-based creative story generation
+
+---
 ## prerequisites 
 - ensure you have torch and transformers libraries installed
     ```bash
     pip install torch transformers accelerate
 
-## How to use the code ?
-- download the code on your device 
-- open a code editor of your choice
-- run the cells
-- type in your prompt in the prompt variable
-- run the cell
+## How to use 
+- Open the notebook
+- Modify the prompt variable with your desired text input
+- Run the generation cell
+- Adjust sampling parameters (temperature, top-p, etc.) to explore output variations
 
 ## Usage 
 ### Example input 
