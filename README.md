@@ -72,7 +72,9 @@ The project explores three core aspects of modern NLP systems:
 
 - Clone the repository:
 
+ ```bash
   git clone https://github.com/Jana-SG/generative-ai-llms-with-huggingface.git
+ ```
 
 - Open any notebook:
   - text_generation.ipynb
